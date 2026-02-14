@@ -1,0 +1,90 @@
+.list {
+  width: 55vw;
+  height: 100%;
+  padding-top: 6%;
+  padding-bottom: 2%;
+  position: relative;
+  background: linear-gradient(
+    320deg,
+    rgb(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.7),
+    rgb(0, 0, 0, 0.9)
+  );
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: auto;
+  scrollbar-color: purple black;
+  scrollbar-width: thin;
+}
+
+h1 {
+  font-size: 2.2rem;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.pilotos,
+.equipes,
+.categorias {
+  width: 97%;
+  border-top: 3px solid white;
+  padding-top: 20px;
+  border-radius: 5px;
+  gap: 20px;
+}
+
+.card {
+  color: white;
+  height: fit-content;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &:hover .trash {
+    display: block;
+  }
+  &:hover .pencil {
+    display: block;
+  }
+
+  .c-head {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .trash {
+    display: none;
+    position: absolute;
+    top: 4%;
+    right: 4%;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.686);
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .pencil {
+    display: none;
+    position: absolute;
+    top: 4%;
+    left: 4%;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    background-color: rgba(0, 13, 255, 0.686);
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+  }
+}

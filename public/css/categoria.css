@@ -1,0 +1,78 @@
+.container.container-categoria {
+  .form {
+    margin-top: 12vh;
+  }
+  h2 {
+    background: linear-gradient(to right, purple, var(--azul));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  h3 {
+    color: white;
+    font-size: 1.5rem;
+  }
+  .inp {
+    border: 4px solid var(--azul);
+  }
+
+  #imgPreview {
+    width: 300px;
+    height: 200px;
+    object-fit: contain;
+    padding: 20px;
+  }
+
+  #selLogo {
+    cursor: pointer;
+  }
+  #selLogo::after {
+    background-color: var(--azul);
+  }
+  .btn {
+    border: 4px solid var(--azul);
+    &:hover {
+      background-color: var(--azul);
+    }
+  }
+
+  .list {
+    border-right: 4px solid var(--azul);
+
+    h1 {
+      background: linear-gradient(to right, purple, var(--azul));
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .categorias {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card {
+      background-color: rgb(40, 40, 40);
+      width: 100%;
+      height: 30vh;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px black;
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+      .c-head {
+        padding: 15px;
+        padding-top: 0;
+        margin: 0;
+      }
+
+      .c-body {
+        padding: 0;
+
+        span {
+          font-size: 1.5rem;
+          font-weight: bold;
+          letter-spacing: 2px;
+        }
+      }
+    }
+  }
+}

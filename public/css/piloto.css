@@ -1,0 +1,111 @@
+.container.container-piloto {
+  .form {
+    margin-top: 10vh;
+  }
+  h2 {
+    background: linear-gradient(to right, purple, var(--roxo));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .inp,
+  .sel {
+    border: 4px solid var(--roxo);
+  }
+
+  #selFoto {
+    cursor: pointer;
+  }
+  #selFoto::after {
+    background-color: var(--roxo);
+  }
+  .btn {
+    border: 4px solid var(--roxo);
+    &:hover {
+      background-color: var(--roxo);
+    }
+  }
+
+  .list {
+    border-right: 4px solid var(--roxo);
+
+    h1 {
+      background: linear-gradient(to right, purple, var(--roxo));
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .pilotos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .card {
+      position: relative;
+      margin-block: 15px;
+      color: white;
+      border-radius: 7px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: fit-content;
+      background-color: rgb(30, 30, 30);
+
+      .c-nome {
+        padding-inline: 7px;
+        margin-bottom: 10px;
+        span {
+          width: 100%;
+          font-size: 1.1rem;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+      }
+
+      .c-infos {
+        padding-inline: 7px;
+        display: flex;
+        justify-content: center;
+        gap: 15%;
+
+        #numero {
+          font-size: 1.2rem;
+          font-weight: bold;
+          color: var(--roxo);
+        }
+      }
+
+      .c-nacional {
+        padding-inline: 7px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        span {
+          font-weight: bold;
+          font-size: 1.1rem;
+          border-bottom: 2px solid white;
+        }
+      }
+
+      .c-equipe {
+        padding-inline: 7px;
+        padding-bottom: 7px;
+        display: flex;
+        justify-content: center;
+        span {
+          font-size: 1.5rem;
+          font-weight: bold;
+          letter-spacing: 2px;
+        }
+      }
+
+      .c-head {
+        img {
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
