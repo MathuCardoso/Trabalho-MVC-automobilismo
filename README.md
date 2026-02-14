@@ -74,4 +74,5 @@ Entidades principais:
 
 ## Autor
 Matheus de Souza Cardoso
+
 Projeto academico da disciplina de desenvolvimento web com padrao MVC.
