@@ -187,7 +187,7 @@ class PilotoController extends Controller
                     echo $p->getMessage();
                 }
             } else {
-                echo "O caminho deve estar errado.<br>";
+                echo "Não foi possível remover a foto do piloto.<br>";
                 echo $piloto->getFotoPerfil();
             }
         } else {

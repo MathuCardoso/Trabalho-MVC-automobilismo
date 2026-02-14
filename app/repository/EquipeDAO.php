@@ -34,26 +34,6 @@ class EquipeDAO
         return $result[0];
     }
 
-    public function isEquipeLivre(Equipe $equipe)
-    {
-        $sql = "SELECT e.id
-        FROM equipes e
-        LEFT JOIN pilotos p on p.id_equipe = e.id
-        WHERE e.id = :id
-        GROUP BY e.id
-        HAVING COUNT(p.id) < 2";
-        $stm = $this->conn->prepare($sql);
-        $stm->bindValue(":id", $equipe->getId());
-        $stm->execute();
-        $result = $stm->fetchAll();
-
-        if (empty($result)) {
-            return false;
-        }
-
-        return true;
-    }
-
     public function list()
     {
         $sql = "SELECT e.*, c.id AS id_categoria, c.nome_categoria

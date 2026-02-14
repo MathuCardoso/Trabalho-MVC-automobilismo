@@ -9,7 +9,7 @@ use App\repository\PilotoDAO;
 class PilotoService
 {
 
-    private PilotoDao $pilotoD;
+    private PilotoDAO $pilotoD;
     private EquipeDAO $equipeD;
 
     public function __construct()
@@ -49,10 +49,7 @@ class PilotoService
 
         if (!$piloto->getEquipe()->getId()) {
             $erros['equipe'] = "Preencha este campo.";
-        } else if (!$this->equipeD->isEquipeLivre($piloto->getEquipe())) {
-            $erros['equipe'] = "Dupla já formada.";
         }
-
 
         return $erros;
     }
